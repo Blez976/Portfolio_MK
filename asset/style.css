@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alice&family=Noto+Sans+JP:wght@300&display=swap');
+*,ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+body{ 
+    all: unset;
+    color: white;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+main{all:unset}
+
+ 
+
+  
+    /***********************/
+   /** Section a propos  **/
+  /***********************/
+
+/**element à cacher ou supprimer**/
+.carte-visite-face p, #navBarMobile, .carte-visite-face .btn{display: none;}
+.btn{
+    
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    margin-right:20px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 75px;
+}
+.btn img{
+    width: 35px;
+    margin-right: 15px;
+    
+}
+#titreSectionLg{
+    position: fixed;
+    top:20.9%;
+    right: 0;
+    height: 380px;
+    width: 60px;
+    border-radius: 37px 0 0 35px;
+    background: rgba(255,255,255,0.81);
+    text-align:center;
+    align-items: center;
+    margin-left: 0;
+    overflow: hidden;
+}
+#titreSectionLg h2{
+    font-family: Verdana;
+    position:fixed;
+    font-size: 25pt;
+    width: 200px;
+    height: 26%;
+    letter-spacing: 3px;
+    transform: rotate(-90.00008deg);
+}
+.section-apropos{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.carte-visite h1{ font-family: 'Alice', serif; width: auto;}
+.carte-visite h3{font-family: 'Alegreya Sans', sans-serif;width: auto; font-size: 25px;}
+/*couleur logo*/
+.cadre-image img{
+    display: inline-block;
+    width: 100px;
+    filter: invert(100%); 
+}
+ 
+
+  
+  .carte-visite{
+    
+    width: 130vh;
+    height: 70vh;
+    border-radius: 35px;
+    border: 2px solid;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    -webkit-box-shadow: 15px 15px 23px 0px #000000; 
+    box-shadow: 15px 15px 23px 0px #000000;  
+ 
+    
+  }
+ 
+
+  /************************/
+ /** Gestion responsive **/
+/************************/
+
+@media(min-width:1200px){
+    /************************/
+   /** Bare de navigation **/
+  /************************/
+  
+  /*positionnement du bare de navigation*/
+  #sidebar{
+      position: fixed;
+      height: 100%;
+      width: 90px;
+      overflow: hidden;
+      transition: 0.8s;  
+      box-shadow: 8px 6px 14px -1px rgba(0,0,0,0.49);/*ombre*/
+      z-index: 2;
+  }
+  
+  /*positionnement des element dans la bare de navigation*/
+  #logoBareMenu{
+       width: 100px;
+       height: 100px;
+  }
+  #logoBareMenu img{
+      width: 60%;
+      margin-top: 20px;
+      margin-left: 10px;
+      filter: invert(100%); 
+  }
+  .menu ul li{
+      display: flex;
+      padding: 0 20px;
+      cursor: pointer;
+  }
+  
+  .selectMenu-hover{
+     text-decoration: none;
+     color: white;
+  }
+  .selectMenu-hover img{
+      width: 50px;
+      filter: invert(100%); 
+  }
+  
+  /*allonger le sidebar en survolant*/
+  #sidebar:hover{
+      width: 220px;
+      z-index: 1;
+  }
+  #sidebar:hover .menu ul li span{
+      padding: 50px 20px;
+      opacity: 1;
+      pointer-events:visible;
+  }
+  #sidebar:hover .menu{
+     
+      width: 80px;
+      height: 100%;
+      color: white;
+  }
+  .selectMenu-hover span{
+      position: absolute;
+      color: white;
+      letter-spacing: 1px;
+      padding: 40px 0 20px 0;
+      opacity: 0;
+      pointer-events: none;
+      font-size: 14px;
+      transition: 0.8s;
+  }
+  .selectMenu-hover:hover span{
+      margin-left: 20px ;
+      
+  }
+  .selectMenu-hover img{
+      font-size: 35px;
+      padding: 40px 0px 20px 0px;
+      
+  }
+   
+  /*section a propos de moi  grands ecran*/
+  
+  #cardRotationY{
+      position: relative;
+      width: 128vh;
+      height: 70vh;
+      border-radius: 35px;
+      top:-40px;
+      left: 50px; 
+      padding: 0;
+  
+      
+  }
+  /*carte visite face de devant*/
+  .carte-visite-face{
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  
+  .trait-vertical{
+      width: auto;
+      margin-left: 50px;
+      margin-top: 5px;
+      border-left: 6px solid white; 
+      height: 180px; 
+      display: inline-block;
+  }
+  
+  .cadre-image img, .cadre-image {width: 220px;}
+  .carte-visite-face h3 { 
+      position: absolute;
+      top: 57%; 
+      left: 66%; 
+      transform: translate(-50%, -50%);
+  }
+  /*carte visite face de dos*/
+  .carte-visite-dos{
+      position: relative;
+      width: 130vh;
+      height: 70vh;
+      border-radius: 35px;
+      top:-100%;
+      text-align: justify;
+      background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+      box-shadow: 15px 15px 23px 0px #000000;  
+      
+  }
+  .carte-visite-dos h3{margin-top: 14px; font-weight: bold; font-size: 35px; text-align: justify;}
+  .carte-visite-dos p{ font-size: 22px;}
+  
+  /*animation carte vistite*/
+  
+  
+  
+  .carte-visite-dos,#cardRotationY{
+      backface-visibility: hidden;
+      transform:  rotateY(-180deg);
+      transition: 0.6s;
+  }
+  
+  
+  #cardRotationY:hover .carte-visite-dos{
+      transform: rotateY(0deg);
+  }
+  
+  
+  .carte-visite-face, #cardRotationY {
+      backface-visibility: hidden;
+      transform: rotateY(0deg);
+      transition: 0.6s;
+  }
+  
+  #cardRotationY:hover .carte-visite-face{
+      transform: rotateY(0deg);
+  }
+  .carte-visite-face, #cardRotationY {
+      backface-visibility: hidden;
+      transform:  rotateY(0deg);
+      transition: 0.6s;
+  }
+  #cardRotationY:hover .carte-visite-face{
+      transform:  rotateY(180deg);
+  }
+  
+  
+  
+  }
+  
+
+
+@media(min-width:992px){
+  /************************/
+ /** Bare de navigation **/
+/************************/
+
+/*positionnement du bare de navigation*/
+#sidebar{
+    position: fixed;
+    height: 100%;
+    width: 90px;
+    overflow: hidden;
+    transition: 0.8s;  
+    box-shadow: 8px 6px 14px -1px rgba(0,0,0,0.49);/*ombre*/
+    z-index: 2;
+}
+
+/*positionnement des element dans la bare de navigation*/
+#logoBareMenu{
+     width: 100px;
+     height: 100px;
+}
+#logoBareMenu img{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 10px;
+    filter: invert(100%); 
+}
+.menu ul li{
+    display: flex;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.selectMenu-hover{
+   text-decoration: none;
+   color: white;
+}
+.selectMenu-hover img{
+    width: 50px;
+    filter: invert(100%); 
+}
+
+/*allonger le sidebar en survolant*/
+#sidebar:hover{
+    width: 220px;
+    z-index: 1;
+}
+#sidebar:hover .menu ul li span{
+    padding: 50px 20px;
+    opacity: 1;
+    pointer-events:visible;
+}
+#sidebar:hover .menu{
+   
+    width: 80px;
+    height: 100%;
+    color: white;
+}
+.selectMenu-hover span{
+    position: absolute;
+    color: white;
+    letter-spacing: 1px;
+    padding: 40px 0 20px 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 14px;
+    transition: 0.8s;
+}
+.selectMenu-hover:hover span{
+    margin-left: 20px ;
+    
+}
+.selectMenu-hover img{
+    font-size: 35px;
+    padding: 40px 0px 20px 0px;
+    
+}
+ 
+/*section a propos de moi  grands ecran*/
+
+#cardRotationY{
+    position: relative;
+    width: 128vh;
+    height: 70vh;
+    border-radius: 35px;
+    top:-40px;
+    left: 50px; 
+    padding: 0;
+
+    
+}
+/*carte visite face de devant*/
+.carte-visite-face{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.trait-vertical{
+    width: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+    border-left: 6px solid white; 
+    height: 180px; 
+    display: inline-block;
+}
+
+.cadre-image img, .cadre-image {width: 220px;}
+.carte-visite-face h3 { 
+    position: absolute;
+    top: 57%; 
+    left: 66%; 
+    transform: translate(-50%, -50%);
+}
+/*carte visite face de dos*/
+.carte-visite-dos{
+    position: relative;
+    width: 130vh;
+    height: 70vh;
+    border-radius: 35px;
+    top:-100%;
+    text-align: justify;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    box-shadow: 15px 15px 23px 0px #000000;  
+    
+}
+.carte-visite-dos h3{margin-top: 14px; font-weight: bold; font-size: 35px; text-align: justify;}
+.carte-visite-dos p{ font-size: 22px;}
+
+/*animation carte vistite*/
+
+
+
+.carte-visite-dos,#cardRotationY{
+    backface-visibility: hidden;
+    transform:  rotateY(-180deg);
+    transition: 0.6s;
+}
+
+
+#cardRotationY:hover .carte-visite-dos{
+    transform: rotateY(0deg);
+}
+
+
+.carte-visite-face, #cardRotationY {
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: 0.6s;
+}
+
+#cardRotationY:hover .carte-visite-face{
+    transform: rotateY(0deg);
+}
+.carte-visite-face, #cardRotationY {
+    backface-visibility: hidden;
+    transform:  rotateY(0deg);
+    transition: 0.6s;
+}
+#cardRotationY:hover .carte-visite-face{
+    transform:  rotateY(180deg);
+}
+
+
+
+}
+
+
+/* largeur écran <= 992px*/
+@media(max-width:992px){
+
+    /*les element à supprimer ou cacher */
+    #navBarMobile{display: none;}
+    .carte-visite-dos{display: none;} /*la bare menu mobile */
+
+    /*element à afficher*/
+    .carte-visite p, .carte-visite-face .btn{display: block;}
+
+    
+    /********************************************/
+   /** Bare de navigation version grand ecran **/
+  /********************************************/
+
+   
+  
+
+
+  #sidebar{
+    position: fixed;
+    height: 100%;
+    width: 90px;
+    overflow: hidden;
+    transition: 0.8s;  
+    box-shadow: 8px 6px 14px -1px rgba(0,0,0,0.49);/*ombre*/
+    z-index: 2;
+}
+
+/*positionnement des element dans la bare de navigation*/
+#logoBareMenu{
+     width: 100px;
+     height: 100px;
+}
+#logoBareMenu img{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 10px;
+    filter: invert(100%); 
+}
+.menu ul li{
+    display: flex;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.selectMenu-hover{
+   text-decoration: none;
+   color: white;
+}
+.selectMenu-hover img{
+    width: 50px;
+    filter: invert(100%); 
+}
+
+
+.selectMenu-hover span{
+    position: absolute;
+    color: white;
+    letter-spacing: 1px;
+    padding: 40px 0 20px 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 14px;
+    transition: 0.8s;
+}
+
+
+
+
+
+  /*cacher le titre menu quand le pointeur
+   ne survol pas la bare de navigation*/
+   
+   #sidebar{ 
+       width: 90px;
+       transition:all .3s ease-in-out;
+       z-index: 2;
+   }
+   
+  
+
+ /*affiche le titre menu quand le pointeur
+    survol la bare de navigation*/
+
+ /*espace entre les element du menu*/
+ .selectMenu-hover img{
+     font-size: 35px;
+     padding: 40px 0px 20px 0px;
+     
+ }
+    /*cacher le titre menu quand le pointeur
+      ne survol pas la bare de navigation*/
+ /* #sidebar:hover .menu ul li span{all: initial;}    test */
+ .selectMenu-hover span{
+        display: inline-block;
+        position: absolute;
+        color: white;
+        padding: 40px 0 20px 0;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 12px;
+        left: 20px;
+        margin-top: 55px;
+        transition: 0.8s;
+ } 
+ 
+ #sidebar:hover .menu ul li span{ padding: 0; margin:0;margin-top: 94px;}    
+.selectMenu-hover:hover span{opacity: 1;} /*afficher le titre*/
+.icon-competence span{left: 9px;}
+   
+
+    
+
+ 
+}
+
+
+
+/*condition si la largeur est <= 768px alors
+ le navigateur prend en charge le code css
+ à l'intérieur de @media */
+ 
+ /* Tablette*/
+ @media(max-width:768px){
+
+    /* bug sans  border*/
+    main{border: 2px solid rgba(255, 255, 255, 0); height: 20vh;}
+    /**les element à supprimer ou cacher**/
+    #titreSectionLg{display: none;}
+    #sidebar{width: 0;}
+    .open-menuMob{
+        width: 90px !important; 
+    }
+    
+    /**************************************************/
+   /** Bare de navigation version mobile & tablette **/
+  /**************************************************/
+   
+
+    #navBarMobile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin:0 auto;
+      position: fixed;
+      width: 100%;
+      height: 10vh;
+      background-color: teal;
+      color: white;
+      z-index: 1;
+      /* glassmorphisme*/ 
+      backdrop-filter: blur(5px);
+      background-color: rgba(0,191,255, 0.075);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+      border: 2px rgba(255,255,255,0.4) solid;
+      border-bottom: 2px rgba(40,40,40,0.35) solid;
+      border-right: 2px rgba(40,40,40,0.35) solid;
+
+      
+    }
+    #navBarMobile h2{ 
+        
+        width: 80%;
+        text-align: center;
+    }
+    
+    
+   
+     /***********************/
+    /** Section a propos  **/
+   /***********************/
+   
+   #cardRotationY{
+       width: 100%;
+       height: auto;
+       display: flex;
+       justify-content: center;
+    }
+   .carte-visite-face{
+       box-sizing: border-box;
+       width: 80%;
+       height: auto;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+       border-radius: 22px;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter:blur(5px);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+        border-radius: 15px;
+        border-top: 2px solid rgba( 255, 255, 255, 1 );
+        border-right: 2px solid rgba( 255, 255, 255, 1 );
+       position: absolute;
+   }
+   .flex-mobile-column{flex-direction: column;}
+   .cadre-image{
+       display: flex;
+       position: relative;
+       top: 22px;
+       background:rgba(190, 189, 189, 0.568);
+       border-radius: 50%;
+       width: 142px;
+       height: 142px;
+       justify-content: center;
+       
+   }
+
+   .cadre-image::after {
+    position: absolute;
+    content: "";
+    height: 148px;
+    width: 148px;
+    top: -3px;
+    z-index: -1;
+    background-image: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    border-radius: 50%;
+    
+    /*  Rotate  */
+    animation-duration: 2s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+       
+ }
+ @keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+   
+  .carte-visite-face h1{
+      
+       position: relative;
+       top: 13px;
+       width: auto;
+       font-size: 27px;
+   }
+   .carte-visite-face h3{
+       position: relative;
+       top: -12px;
+       width: auto;
+       font-size: 16px;
+       font-weight: bold;
+       letter-spacing: 1px;
+   }
+   .carte-visite-face p{
+       position: relative;
+       top: -10px;
+       text-align: justify;
+       font-size: 14px;
+       color: rgb(22, 4, 99);
+   }
+
+   .btn{
+       display: flex;
+       align-items: center;
+       width: auto;
+       height: 50px;
+       margin-right:unset;
+       background-color:unset;
+       border-radius: 100px;
+       backdrop-filter: blur(5px);
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+       border-top: 2px solid rgba( 255, 255, 255, 1 );
+       border-right: 2px solid rgba( 255, 255, 255, 1 );
+   }
+   /**taille icone des bouton*/
+   .btn img{
+       width: 35px;
+       height: auto;
+       margin-right: 15px;
+   }
+
+   .btn-contact{
+       margin-bottom: 20px;
+   }
+
+
+
+}
+
+/*Smartphone*/
+@media(max-width:576px){
+     
+    
+    .cadreImage{top: 11px;}
+    .carte-visite-face h1{top: 16px;}
+    .carte-visite-face h3{top: -12px;}
+    .carte-visite-face p{top: -25px;}
+ 
+}
+

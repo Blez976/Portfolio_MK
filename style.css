@@ -1,0 +1,1247 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300&family=Alice&family=Noto+Sans+JP:wght@300&display=swap');
+*,ul{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+body{ 
+    all: unset;
+    color: white;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+main{all:unset;}
+
+/**au click ou au scroll d'une section l'icone representent la section et selectionnée **/
+.seclect-items-nav::after{
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: #0d6efd;
+    width: 55px;
+    height: 50px;
+    border-radius: 8px;
+    pointer-events: visible;
+    margin-top: -64px;
+    margin-left: -8px;
+    z-index: -1;
+    transition: 2s ease;
+}
+
+#btnHautPas{
+    display: none;
+    position: fixed;
+    top: 90vh;
+    right: 30px;
+}
+
+  
+    /***********************/
+   /** Section a propos  **/
+  /***********************/
+
+/**element à cacher ou supprimer(element version mobile)**/
+.carte-visite-face p, #navBarMobile, .carte-visite-face .btn{display: none;} 
+
+/*bouton télecharger et contact*/
+.btn{
+    
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    margin-right:20px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 75px;
+}
+.btn img{
+    width: 35px;
+    margin-right: 15px;
+    
+}
+
+/*titre section (a propos, experience ...)*/
+.cadre-titre-sectionLg{
+    position: absolute;
+    margin-top: 11px;
+    width: 300px;
+    height: 55px;
+    color: rgb(36, 14, 136);
+    font-family: 'Alice', serif;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+}
+
+.cadre-titre-sectionLg::after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top:8px;
+    left: 8px;
+    width: 300px;
+    height: 55px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+}
+
+.cadre-titre-sectionLg h2{
+    font-family: 'Alice', serif;
+    font-size: 25pt;
+    width: 300px;
+    height: 26%;
+    letter-spacing: 3px;
+    text-align: center;
+    padding-top: 10px;
+}
+/* section a propos */
+.section-apropos{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carte-visite h1{ font-family: 'Alice', serif; width: auto;}
+.carte-visite h3{font-family: 'Alegreya Sans', sans-serif;width: auto; font-size: 25px;}
+/*couleur logo*/
+.cadre-image img{
+    display: inline-block;
+    width: 100px;
+    filter: invert(100%); 
+}
+ 
+/******* Section parcours *******/
+
+.section-parcours{
+    height: 130vh;
+    margin: 0 auto;
+    margin-bottom: 160px;
+    padding-right: 0px;
+    padding-left: 0px;
+    color: black;
+
+}
+
+.cadre-cont-parcours{
+    margin-top: 20%;
+    background-color: white;
+    height: 78%;
+    border-radius: 35px;
+    box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.7);
+}
+
+.cadre-titre-parcours{
+    position: relative;
+    width: 82%;
+    height: 85px;
+    margin-top: -10%;
+    margin-left: 38px; 
+    padding-left: 5%;
+    padding-top:4%;
+    border-radius: 23px;
+    background-color: white;
+    box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.7);
+}
+.cadre-titre-parcours>img{
+    margin-right: 8%;
+}
+.ligne-vetical-parcours{
+    display: inline-block;
+    margin-top:75px;
+    border-left: 2px solid #FF7B36;
+    margin-left: 4%;
+    height: 120px;
+    
+}
+.ligne-vetical-parcours>img{
+    position: relative;
+    width:35px;
+    top: -38%;
+    left: -52%;
+}
+.resume-parcours{
+    margin-bottom: 30px;
+    margin-left: 55px;
+    margin-top: -176px;
+    padding-top: 4%;
+    text-align: justify;
+}
+
+/******* Section 2 competence *******/
+
+.section-competence{
+    margin: 0 auto;
+    border: 4px solid white;
+    height: 150vh;
+
+}
+#cercle-center{ 
+    width: 20vh;
+    height: 20vh;
+    background-color: white; 
+    border-radius: 100%;
+}
+#cercle-center::after{
+    position: absolute;
+    content: '' ;
+    width: 60vh;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.281);
+    top: 297.5vh;
+    left: 71vh;
+    border-radius: 100%;
+    z-index: -1;
+}
+.cercle-competence img{
+    position: absolute;
+    right:10px;
+}
+.cercle-competence span{
+    position: absolute;
+    left: 17px;
+}
+.cercle-competence {
+    display: flex;
+    position: absolute !important; 
+    width: 15vh;
+    height: 15vh;
+	position: relative;
+	background: #88b7d5;
+    border-radius: 100%;
+    align-items: center;
+    left: 63vh;
+    justify-content: center;
+    z-index: -2;
+    border:2px solid red ;
+    border-width: 2px 2px 30px 2px;
+}
+ .demi-cercle{
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 99, 71, 0.39);
+    width: 15vh;
+    height:15vh;
+    border-radius: 100%;
+    
+    border-width: 2px 2px 30px 2px; 
+} 
+ 
+
+.cercle-competence::after{
+    position: absolute;
+    content: "";
+    width: 10vh;
+    height: 10vh;
+    transform: rotateZ(226deg);
+    top: 1px;
+    background-color: #ff6600;
+    transform: rotateZ(135deg);
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ; 
+}
+
+
+
+
+
+
+
+/******* Section 3 portfolio *******/
+
+.section-portfolio{margin: 0 auto ;}
+
+/*bare portfolio*/
+.menu-portfolio {
+	margin: 180px auto 0;
+	position: relative;
+	width: 80%;
+	height: 70px;
+    background-color: white;
+    box-shadow: 8px 10px 10px -2px rgba(0,0,0,0.74);
+	border-radius: 18px;
+    font-size: 0;
+    padding-top: 10px;
+    z-index: 1;
+}
+.menu-portfolio a {
+	line-height: 50px;
+	height: 100%;
+	font-size:calc(100% + 17px);
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #34495e;
+	cursor: pointer;
+}
+/*animation selection*/
+.menu-portfolio .animation {
+    position: absolute;
+    border-bottom: 5px solid red;
+    top: 55px;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	
+}
+/*espace occuper par le titre*/
+.menu-portfolio  a:nth-child(1) {
+    width: 120px;
+    text-align: center;
+
+}
+.menu-portfolio  a:nth-child(2) {
+    width: 190px;
+    text-align: center;
+}
+.menu-portfolio a:nth-child(3) {
+    width: 213px;
+    text-align: center;
+}
+.menu-portfolio a:nth-child(4) {
+    width: 250px;
+    text-align: center;
+}
+
+
+
+
+
+/*container portfolio*/
+
+.card-realisation{
+    /* width: 200px; */
+    height: 204.400px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 9px 11px 11px -4px rgba(0,0,0,0.7);
+   
+    
+}
+
+.hidden-card-realisation{ display: none;}
+.container-realisation{
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    margin-top: -5%;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: auto ;
+}
+
+.card-realisation img{
+    width: 100%;
+    height: 100%;
+ }
+  
+ figure:hover .legende-realissation{
+        
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-style: italic;
+    font-size: 13px;
+    width:300px;
+    height: 10vh;
+    padding: 15px;
+    transform: translate(0%, -7.6vh);
+    transition: 0.5s ease;
+}
+
+
+ 
+
+/** section contact ***/
+#contact{
+   height: 105vh;
+  
+}
+.container-formulaire{
+    display: flex;
+    width: 56vh;
+    height: 83vh;
+    margin-top: 18vh;
+    overflow: auto;
+    
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0,191,255, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+    
+}
+form{display: block; margin-top: 90px !important; } 
+.container-formulaire h3{
+    position: absolute;
+    top:10px;
+    width: 100%;
+    text-align: center;
+}
+.container-formulaire input { /*zone info*/
+    display: block;
+    width: 100%;
+    height: 6.5vh;
+    border-radius: 25px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    backdrop-filter: blur(0px) saturate(130%);
+    background-color: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)  ; 
+    
+}
+.container-formulaire input[type=submit]{
+    position: absolute;
+    width: 50%;
+    padding: 0 20px;
+    top: 80%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, 123%);
+    text-align: center;
+}
+.container-formulaire textarea{ /* zone message*/
+    display: block;
+    width: 100%;
+    height: 25vh;
+    padding: 20px;
+    outline: none;
+    color: white;
+    backdrop-filter: blur(0px) saturate(130%);
+    background-color: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)  ; 
+    border-radius: 15px;
+    resize: none;
+}
+
+
+  /************************/
+ /** Gestion responsive **/
+/************************/
+
+@media(min-width:992px){
+
+    /*
+    *  Affichage pour les écrans supéreur à 992px
+    */
+
+
+    /************************/
+    /** Bare de navigation **/
+    /************************/
+
+    /*positionnement du bare de navigation*/
+    #sidebar{
+        position: fixed;
+        height: 100%;
+        width: 90px;
+        overflow: hidden;
+        transition: 0.8s;  
+        box-shadow: 8px 6px 14px -1px rgba(0,0,0,0.49);/*ombre*/
+        z-index: 2;
+    }
+
+    /*positionnement des element dans la bare de navigation*/
+    #logoBareMenu{
+        width: 100px;
+        height: 100px;
+    }
+    #logoBareMenu img{
+        width: 60%;
+        margin-top: 20px;
+        margin-left: 10px;
+        filter: invert(100%); 
+    }
+    .menu ul li{
+        display: flex;
+        padding: 0 20px;
+        cursor: pointer;
+    }
+
+    .selectMenu-hover{
+    text-decoration: none;
+    color: white;
+    }
+    .selectMenu-hover img{
+        width: 38px;
+        filter: invert(100%); 
+    }
+
+    /*allonger le sidebar en survolant*/
+    #sidebar:hover{
+        width: 220px;
+        z-index: 1;
+    }
+    .menu ul li:hover:after {
+        display: block;
+        position: absolute;
+        content: "";
+        background-color: #0d6efd;
+        width: 198px;
+        height: 60px;
+        border-radius: 8px;
+        pointer-events: visible;
+        margin-top: 35px;
+        margin-left: -8px;
+        z-index: -1;
+        transition: 2s ease;
+    }
+    
+
+    /*en survolant un titre du menu décaler de 20px */
+    #sidebar:hover .menu ul li a span{
+        padding: 50px 20px;
+        opacity: 1;
+        pointer-events:visible;
+    
+    }
+
+
+    #sidebar:hover .menu{
+    
+        width: 80px;
+        height: 100%;
+        color: white;
+    }
+    .selectMenu-hover span{
+        position: absolute;
+        color: white;
+        letter-spacing: 1px;
+        padding: 40px 0 20px 0;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 14px;
+        transition: 0.8s;
+    }
+    .selectMenu-hover:hover span{
+        margin-left: 20px ;
+        
+    }
+    .selectMenu-hover img{
+        font-size: 35px;
+        padding: 40px 0px 20px 0px;
+        
+    }
+
+    /**********************/
+    /** Section a propos **/
+    /**********************/
+    
+
+
+    .carte-visite{
+        
+        width: 110vh;
+        height: 65vh;
+        border-radius: 35px;
+        border: 2px solid;
+        background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+        -webkit-box-shadow: 15px 15px 23px 0px #000000; 
+        box-shadow: 15px 15px 23px 0px #000000;  
+    
+        
+    }
+    /*container de la carte de viste, face de devant & dos*/ 
+    #cardRotationY{
+        position: relative;
+        width: 110vh;
+        height: 65vh;
+        border-radius: 35px;
+        top:140px;
+        left: 50px; 
+        padding: 0;
+
+        
+    }
+    /*carte visite face de devant*/
+    .carte-visite-face{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*séparateur logo de la carte de visite et le nom du dev*/
+    .trait-vertical{
+        width: auto;
+        margin-left: 50px;
+        margin-top: 5px;
+        border-left: 6px solid white; 
+        height: 160px; 
+        display: inline-block;
+    }
+
+    .cadre-image img, .cadre-image {width: 190px;} /*container logo*/
+    .carte-visite-face h3 { 
+        font-size: 20px;
+        position: absolute;
+        top: 57%; 
+        left: 66%; 
+        transform: translate(-50%, -50%);
+    }
+    /*carte visite face de dos*/
+    .carte-visite-dos{
+        position: relative;
+        width: 110vh;
+        height: 65vh;
+        border-radius: 35px;
+        top:-100%;
+        text-align: justify;
+        background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+        box-shadow: 15px 15px 23px 0px #000000;  
+        
+    }
+    .carte-visite-dos h3{margin-top: 14px; font-weight: bold; font-size: 35px; text-align: justify;}
+    .carte-visite-dos p{ font-size: 22px;}
+
+    /*animation carte vistite*/
+
+
+    /*tourne la face du dos et cacher le contenue*/
+    .carte-visite-dos,#cardRotationY{
+        backface-visibility: hidden;
+        transform:  rotateY(-180deg);
+        transition: 0.6s;
+    }
+
+    /*en survolant le container tourner la carte et afficher le contenu (dos de la carte)*/
+    #cardRotationY:hover .carte-visite-dos{
+        transform: rotateY(0deg);
+    }
+    /*tourne la face de devant et cacher le contenue*/
+    .carte-visite-face, #cardRotationY {
+        backface-visibility: hidden;
+        transform:  rotateY(0deg);
+        transition: 0.6s;
+    }
+    /*en survolant le container tourner la carte et afficher le contenu (devant de la carte)*/
+    #cardRotationY:hover .carte-visite-face{
+        transform:  rotateY(180deg);
+    }
+
+
+
+    /** section portfolio**/
+    .menu-portfolio a:nth-child(1):hover~.animation {
+        width: 40px ;
+        transform: translate(-294px, 0);
+        border-bottom: 2px solid #1abc9c;
+        background-color: #1abc9c;
+    }
+    .menu-portfolio a:nth-child(2):hover~.animation {
+        width: 40px;
+        transform: translate(-157px, 0px);
+        border-bottom: 2px solid #e74c3c;
+    }
+    .menu-portfolio a:nth-child(3):hover~.animation {
+        width: 100px;
+        transform: translate(25px, 0px);
+        border-bottom: 2px solid #3498db;
+    }
+    .menu-portfolio a:nth-child(4):hover~.animation {
+        width: 90px;
+        transform: translate(237px, 0px);
+        border-bottom: 2px solid #9b59b6;
+    }
+    
+
+   .card-realisation{
+       height:153.4px; 
+       padding: 0;
+       overflow: hidden;   
+    }
+   
+
+
+
+}
+
+@media(min-width:1200px){
+  
+    /*
+   *  Affichage pour les écrans supéreur à 1200px
+  */
+   
+  #cardRotationY{left: 0;}
+  .carte-visite{
+    
+    width: 130vh;
+    height: 70vh;
+    border-radius: 35px;
+    border: 2px solid;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    -webkit-box-shadow: 15px 15px 23px 0px #000000; 
+    box-shadow: 15px 15px 23px 0px #000000;  
+ 
+    
+  }
+  
+  
+  .trait-vertical{
+      width: auto;
+      margin-left: 50px;
+      margin-top: 5px;
+      border-left: 6px solid white; 
+      height: 180px; 
+      display: inline-block;
+  }
+  
+  .cadre-image img, .cadre-image {width: 220px;}
+  .carte-visite-face h3 { 
+      position: absolute;
+      top: 57%; 
+      left: 66%; 
+      transform: translate(-50%, -50%);
+  }
+  /*carte visite face de dos*/
+  .carte-visite-dos{
+      position: relative;
+      width: 130vh;
+      height: 70vh;
+      border-radius: 35px;
+      top:-108%;
+      text-align: justify;
+      background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+      box-shadow: 15px 15px 23px 0px #000000;  
+      
+  }
+  .carte-visite-dos h3{margin-top: 14px; font-weight: bold; font-size: 35px; text-align: justify;}
+  .carte-visite-dos p{ font-size: 22px;}
+  
+  /*animation carte vistite*/
+  
+  
+  
+  .carte-visite-dos,#cardRotationY{
+      backface-visibility: hidden;
+      transform:  rotateY(-180deg);
+      transition: 0.6s;
+  }
+  
+  
+  #cardRotationY:hover .carte-visite-dos{
+      transform: rotateY(0deg);
+  }
+  
+  
+  .carte-visite-face, #cardRotationY {
+      backface-visibility: hidden;
+      transform: rotateY(0deg);
+      transition: 0.6s;
+  }
+  
+  
+  #cardRotationY:hover .carte-visite-face{
+      transform:  rotateY(180deg);
+  }
+  /** section portfolio**/
+  .menu-portfolio .start-home,.menu-portfolio a:nth-child(1):hover~.animation {
+        width: 40px ;
+        transform: translate(-326px, 0);
+        border-bottom: 2px solid #1abc9c;
+        background-color: #1abc9c;
+    }
+   .menu-portfolio a:nth-child(2):hover~.animation {
+        width: 40px;
+        transform: translate(-173px, 0px);
+        border-bottom: 2px solid #e74c3c;
+    }
+    .menu-portfolio a:nth-child(3):hover~.animation {
+        width: 85px;
+        transform: translate(25px, 0px);
+        border-bottom: 2px solid #3498db;
+    }
+    .menu-portfolio  a:nth-child(4):hover~.animation {
+        width: 65px;
+        transform: translate(261px, 0px);
+        border-bottom: 2px solid #9b59b6;
+    }
+  
+    .card-realisation{height:204.4px;}
+
+    
+  
+  }
+  
+
+
+
+/* largeur écran <= 992px*/
+@media(max-width:992px){
+
+    /*les element à supprimer ou cacher */
+    #navBarMobile{display: none;}
+    /*la bare menu mobile */
+
+    
+    
+    /********************************************/
+   /** Bare de navigation version grand ecran **/
+  /********************************************/
+
+   
+  
+
+
+  #sidebar{
+    position: fixed;
+    height: 100%;
+    width: 90px;
+    overflow: hidden;
+    transition: 0.8s;  
+    box-shadow: 8px 6px 14px -1px rgba(0,0,0,0.49);/*ombre*/
+    z-index: 2;
+}
+
+/*positionnement des element dans la bare de navigation*/
+#logoBareMenu{
+     width: 100px;
+     height: 100px;
+}
+#logoBareMenu img{
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 10px;
+    filter: invert(100%); 
+}
+.menu ul li{
+    display: flex;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.selectMenu-hover{
+   text-decoration: none;
+   color: white;
+}
+.selectMenu-hover img{
+    width: 38px;
+    filter: invert(100%); 
+}
+
+
+.selectMenu-hover span{
+    position: absolute;
+    color: white;
+    letter-spacing: 1px;
+    padding: 40px 0 20px 0;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 14px;
+    transition: 0.8s;
+}
+
+
+
+
+
+  /*cacher le titre menu quand le pointeur
+   ne survol pas la bare de navigation*/
+   
+   #sidebar{ 
+       width: 90px;
+       transition:all .3s ease-in-out;
+       z-index: 2;
+   }
+   
+  
+
+ /*affiche le titre menu quand le pointeur
+    survol la bare de navigation*/
+
+ /*espace entre les element du menu*/
+ .selectMenu-hover img{
+     font-size: 35px;
+     padding: 40px 0px 20px 0px;
+     
+ }
+    /*cacher le titre menu quand le pointeur
+      ne survol pas la bare de navigation*/
+ /* #sidebar:hover .menu ul li span{all: initial;}    test */
+ .selectMenu-hover span{
+        display: inline-block;
+        position: absolute;
+        color: white;
+        padding: 40px 0 20px 0;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 12px;
+        left: 20px;
+        margin-top: 55px;
+        transition: 0.8s;
+ } 
+ 
+ #sidebar:hover .menu ul li span{ padding: 0; margin:0;margin-top: 94px;}    
+.selectMenu-hover:hover span{opacity: 1;} /*afficher le titre*/
+.icon-competence span{left: 9px;}
+
+.carte-visite{
+    
+    width: 90vh;
+    height: 55vh;
+    border-radius: 35px;
+    border: 2px solid;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    -webkit-box-shadow: 15px 15px 23px 0px #000000; 
+    box-shadow: 15px 15px 23px 0px #000000;  
+ }
+   
+ #cardRotationY{
+    position: relative;
+    width: 90vh;
+    height: 55vh;
+    border-radius: 35px;
+    top:100px;
+    left: 50px; 
+    padding: 0;
+
+    
+}
+/*carte visite face de devant*/
+.carte-visite-face{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.trait-vertical{
+    width: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+    border-left: 6px solid white; 
+    height: 140px; 
+    display: inline-block;
+}
+
+.cadre-image img, .cadre-image {width: 160px;}
+.carte-visite-face h1{font-size: 30px;}
+.carte-visite-face h3 { 
+    font-size: 16px;
+    position: absolute;
+    top: 57%; 
+    left: 66%; 
+    transform: translate(-50%, -50%);
+}
+/*carte visite face de dos*/
+.carte-visite-dos{
+    position: relative;
+    width: 90vh;
+    height: 55vh;
+    border-radius: 35px;
+    top:-100%;
+    text-align: justify;
+    background-image: linear-gradient(to right, #fd33cb, #d840d9, #ad4ce3, #7855e7, #195ae7);
+    box-shadow: 15px 15px 23px 0px #000000;  
+    
+}
+.carte-visite-dos h3{margin-top: 14px; font-weight: bold; font-size: 25px ; text-align: justify;}
+.carte-visite-dos p{ font-size: 17px;}
+
+/*animation carte vistite*/
+
+
+
+.carte-visite-dos,#cardRotationY{
+    backface-visibility: hidden;
+    transform:  rotateY(-180deg);
+    transition: 0.6s;
+}
+
+
+#cardRotationY:hover .carte-visite-dos{
+    transform: rotateY(0deg);
+}
+
+
+.carte-visite-face, #cardRotationY {
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: 0.6s;
+}
+
+#cardRotationY:hover .carte-visite-face {
+    transform: rotateY(0deg);
+}
+.carte-visite-face, #cardRotationY {
+    backface-visibility: hidden;
+    transform:  rotateY(0deg);
+    transition: 0.6s;
+}
+#cardRotationY:hover .carte-visite-face{
+    transform:  rotateY(180deg);
+}
+
+/** section parcours**/
+.section-parcours{margin-bottom: 870px;}
+
+
+/** section portfolio**/
+.menu-portfolio a:nth-child(1):hover~.animation {
+	width: 35px ;
+    transform: translate(-215px, 0);
+    border-bottom: 2px solid #1abc9c;
+	background-color: #1abc9c;
+}
+ .menu-portfolio a:nth-child(2):hover~.animation {
+	width: 35px;
+	transform: translate(-114px, 0px);
+	border-bottom: 2px solid #e74c3c;
+}
+.menu-portfolio a:nth-child(3):hover~.animation {
+	width: 85px;
+	transform: translate(17px, 0px);
+	border-bottom: 2px solid #3498db;
+}
+.menu-portfolio a:nth-child(4):hover~.animation {
+	width: 60px;
+	transform: translate(172px, 0px);
+	border-bottom: 2px solid #9b59b6;
+}
+
+.card-realisation{
+     height:156.663px;
+     padding: 0;
+     overflow: hidden;
+     z-index: 0;
+    
+    }
+
+ 
+}
+
+
+
+/*condition si la largeur est <= 768px alors
+ le navigateur prend en charge le code css
+ à l'intérieur de @media */
+ 
+ /* Tablette*/
+ @media(max-width:768px){
+
+   
+    /**les element à supprimer ou cacher**/
+    .cadre-titre-sectionLg, .trait-vertical, #cardRotationY .carte-visite-dos{display: none;}
+    /*element à afficher*/
+    .carte-visite p, .carte-visite-face .btn{display: block;}
+    
+
+    #cardRotationY:hover .carte-visite-face{
+        transform:  rotateY(0deg);
+    }
+    
+    
+    #sidebar{width: 0; z-index: 99;}
+    #titreSection{color: rgb(36, 14, 136); font-family: 'Alice', serif;}
+    .open-menuMob{width: 90px !important;}
+    
+
+    /**************************************************/
+   /** Bare de navigation version mobile & tablette **/
+  /**************************************************/
+   
+
+    #navBarMobile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin:0 auto;
+      position: fixed;
+      width: 100%;
+      height: 10vh;
+      background-color: teal;
+      color: white;
+      z-index: 2;
+      /* glassmorphisme*/ 
+      backdrop-filter: blur(5px);
+      background-color: rgba(0,191,255, 0.075);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+      border: 2px rgba(255,255,255,0.4) solid;
+      border-bottom: 2px rgba(40,40,40,0.35) solid;
+      border-right: 2px rgba(40,40,40,0.35) solid;
+
+      
+    }
+    #navBarMobile h2{
+        width: 80%;
+        text-align: center;
+    }
+     
+    
+    
+   
+     /***********************/
+    /** Section a propos  **/
+   /***********************/
+   .section-apropos{height: 100vh; margin-bottom: 150px;}
+   #cardRotationY{
+       width: 100%;
+       height: auto;
+       display: flex;
+       justify-content: center;
+      align-items: center;
+      left: 0px;
+    }
+   .carte-visite-face{
+       box-sizing: border-box;
+       width: 100%;
+       height: auto;
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 20px;
+       border-radius: 22px;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter:blur(5px);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+        border-radius: 15px;
+        border-top: 2px solid rgba( 255, 255, 255, 1 );
+        border-right: 2px solid rgba( 255, 255, 255, 1 );
+       position: absolute;
+   }
+   .flex-mobile-column{flex-direction: column;}
+   .cadre-image img, .cadre-image {
+        width: 100px;
+    }
+   .cadre-image{
+       display: flex;
+       position: relative;
+       top: 22px;
+       background:rgba(190, 189, 189, 0.568);
+       border-radius: 50%;
+       width: 142px;
+       height: 142px;
+       justify-content: center;
+       
+   }
+
+   .cadre-image::after {
+    position: absolute;
+    content: "";
+    height: 148px;
+    width: 148px;
+    top: -3px;
+    z-index: -1;
+    background-image: linear-gradient(135deg, #FEED07 0%, #FE6A50 5%, #ED00AA 15%, #2FE3FE 50%, #8900FF 100%);
+    border-radius: 50%;
+    
+    /*  Rotate  */
+    animation-duration: 2s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+       
+ }
+ @keyframes rotate {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+   
+  .carte-visite-face h1{
+      
+       position: relative;
+       top: 13px;
+       width: auto;
+       font-size: 27px;
+   }
+   .carte-visite-face h3{
+       all: unset;
+       position: relative;
+       top: -12px;
+       width: auto;
+       font-size: 16px;
+       font-weight: bold;
+       letter-spacing: 1px;
+   }
+   .carte-visite-face p{
+       position: relative;
+       top: -10px;
+       text-align: justify;
+       font-size: 14px;
+       color: rgb(22, 4, 99);
+   }
+
+   .btn{
+       display: flex;
+       align-items: center;
+       width: auto;
+       height: 50px;
+       margin-right:unset;
+       background-color:unset;
+       border-radius: 100px;
+       backdrop-filter: blur(5px);
+       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+       background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0));
+       border-top: 2px solid rgba( 255, 255, 255, 1 );
+       border-right: 2px solid rgba( 255, 255, 255, 1 );
+   }
+   /**taille icone des bouton*/
+   .btn img{
+       width: 35px;
+       height: auto;
+       margin-right: 15px;
+   }
+
+   .btn-contact{
+       margin-bottom: 20px;
+   }
+
+
+     /***********************/
+    /** Section parcours  **/
+   /***********************/
+   .section-parcours{padding-top: 50px;}
+
+   /*** section portfolio***/
+   .menu-portfolio {
+      margin: 89px auto 0;
+      
+   }
+
+   .menu-portfolio a, .animation{display: none;}
+   .menu-portfolio .select-next-mob{display: block;}
+   .card-realisation{height:169.062px;}
+   .container-realisation{height: 80vh;border-radius: 8px}
+  
+    
+
+  
+
+
+}
+
+/*Smartphone*/
+@media(max-width:576px){
+
+
+     
+     /***********************/
+    /** Section a propos  **/
+   /***********************/
+    .cadreImage{top: 11px;}
+    .carte-visite-face h1{top: 16px;}
+    .carte-visite-face h3{top: -12px;}
+    .carte-visite-face p{top: -25px;}
+
+    /*** section parcours***/
+    .cadre-cont-parcours{height: auto;}
+
+     /*** section portfolio***/
+  
+   .card-realisation{height: 237.825px;}
+ 
+}
+
