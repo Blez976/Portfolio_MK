@@ -147,7 +147,7 @@ main{all:unset;}
     padding-top:4%;
     border-radius: 23px;
     background-color: white;
-    box-shadow: 6px 6px 17px 0px rgba(0,0,0,0.7);
+    box-shadow: 6px 6px 17px 0px rgba(0, 0, 0, 0.7);
 }
 .cadre-titre-parcours>img{
     margin-right: 8%;
@@ -182,7 +182,12 @@ main{all:unset;}
     height: 150vh;
 
 }
-#cercle-center{ 
+
+#cercle-center{
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20vh;
     height: 20vh;
     background-color: white; 
@@ -193,58 +198,268 @@ main{all:unset;}
     content: '' ;
     width: 60vh;
     height: 60vh;
-    background-color: rgba(0, 0, 0, 0.281);
-    top: 297.5vh;
-    left: 71vh;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100%;
     z-index: -1;
 }
-.cercle-competence img{
-    position: absolute;
-    right:10px;
+.ctn{
+    display: flex;
+    position: absolute !important; 
+    width: 15vh;
+    height: 15vh;
+    position: relative;
+    color: black;
+	background: rgb(4, 33, 95);
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
 }
-.cercle-competence span{
+/*triangle*/
+.ctn::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 40px 15.5px 0 15.5px;
+    border-radius: 1px;
+    border-color: #ad667c transparent transparent transparent;
+    border-style: solid;
     position: absolute;
-    left: 17px;
+    z-index: 0;
+    bottom: -28%;
 }
+
 .cercle-competence {
     display: flex;
     position: absolute !important; 
     width: 15vh;
     height: 15vh;
-	position: relative;
-	background: #88b7d5;
+    position: relative;
+    color: black;
+	background: white;
     border-radius: 100%;
     align-items: center;
-    left: 63vh;
     justify-content: center;
-    z-index: -2;
-    border:2px solid red ;
-    border-width: 2px 2px 30px 2px;
+    overflow: hidden;
 }
- .demi-cercle{
-    display: block;
-    position: absolute;
-    background-color: rgba(255, 99, 71, 0.39);
-    width: 15vh;
-    height:15vh;
-    border-radius: 100%;
-    
-    border-width: 2px 2px 30px 2px; 
-} 
- 
 
 .cercle-competence::after{
     position: absolute;
     content: "";
-    width: 10vh;
-    height: 10vh;
-    transform: rotateZ(226deg);
-    top: 1px;
-    background-color: #ff6600;
-    transform: rotateZ(135deg);
-    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ; 
+    width: 60vh;
+    height: 60vh;
+    right: -52.8vh;
+    background-color: #fe16eb;
+    border-radius: 100%;
+    
+    
 }
+/*position icone compétence*/
+.cercle-competence img{
+    z-index: 2;
+    position: absolute;
+    right:10px;
+}
+.cercle-competence span{
+    border: none;
+    position: absolute;
+    left: 17px;
+    font-size: 14px;
+}
+
+.competence-react{
+    transform: rotateZ(90deg);
+}
+.ctn-react{
+    top: -138.5%;
+}
+#cercle-center .competence-react span{
+    width: auto;
+    border:none;
+    transform: rotateZ(-90deg);
+    left: -4px;
+}
+.competence-react::after{background-color: #AD667C;}
+
+.ctn-wordpress{
+    top: -94.5%;
+    left: 120%;
+}
+.ctn-wordpress::after{
+    transform: rotateZ(45deg);
+    right: 79%;
+    bottom: -9%;
+    border-color: #811A68 transparent transparent transparent;
+    
+}
+.competence-wordpress{transform: rotateZ(135deg);}
+
+.competence-wordpress img{transform: rotateZ(95deg);}
+#cercle-center .competence-wordpress span{
+    width: auto;
+    border:none;
+    transform: rotateZ(-135deg);
+    left: -4px;
+}
+.competence-wordpress::after{background-color: #811A68;}
+
+.ctn-python{
+    top: auto;
+    left: 163%;
+}
+.ctn-python::after{
+    transform: rotateZ(90deg);
+    right: 96%;
+    bottom: 32%;
+    border-color: #00548C transparent transparent transparent;
+    
+}
+.competence-python{transform: rotateZ(180deg);}
+
+.competence-python img{transform: rotateZ(90deg);}
+#cercle-center .competence-python span{
+    width: auto;
+    border:none;
+    transform: rotateZ(-180deg);
+    left: 5px;
+}
+.competence-python::after{background-color: #00548C;}
+
+.ctn-html{
+    bottom: -95%;
+    left: 119%;
+}
+.ctn-html::after{
+    transform: rotateZ(135deg);
+    left: -9%;
+    bottom: 78%;
+    border-color: #1768FF transparent transparent transparent;
+    
+}
+.competence-html{ transform: rotateZ(225deg);}
+.competence-html img{transform: rotateZ(90deg);}
+#cercle-center .competence-html span{
+    width: auto;
+    border: none;
+    transform: rotateZ(-225deg);
+    left: 13px;
+}
+.competence-html::after{background-color:#1768FF;}
+
+
+.ctn-css{
+    bottom: -139%;
+    left: 12%;
+}
+.ctn-css::after{
+    transform: rotateZ(180deg);
+    left: 36%;
+    bottom: 94%;
+    border-color: #16A1FE transparent transparent transparent;
+    
+}
+.competence-css{transform: rotateZ(270deg);}
+.competence-css img{transform: rotateZ(90deg);}
+#cercle-center .competence-css span{
+    width: auto;
+    border: none;
+    transform: rotateZ(-270deg);
+    left: 20px;
+}
+.competence-css::after{background-color:#16A1FE;}
+
+.ctn-js{
+    bottom: -94%;
+    left: -94%;
+}
+.ctn-js::after{
+    transform: rotateZ(225deg);
+    left: 78%;
+    bottom: 75%;
+    border-color: #10b696 transparent transparent transparent;
+    
+}
+.competence-js{ transform: rotateZ(315deg);}
+.competence-js img{transform: rotateZ(90deg);}
+#cercle-center .competence-js span{
+    width: auto;
+    border: none;
+    transform: rotateZ(-315deg);
+    left: 1px;
+}
+.competence-js::after{background-color:#10B696;}
+
+.ctn-mysql{
+    bottom: auto;
+    left: -210px;
+}
+.ctn-mysql::after{
+    transform: rotateZ(270deg);
+    left: 99%;
+    bottom: 33%;
+    border-color: #159888 transparent transparent transparent;
+    
+}
+.competence-mysql{transform: rotateZ(360deg);}
+.competence-mysql img{transform: rotateZ(90deg);right: -2px;}
+#cercle-center .competence-mysql span{
+    width: auto;
+    border: none;
+    transform: rotateZ(-360deg);
+    left: 10px;
+}
+.competence-mysql::after{background-color:#159888;}
+
+.ctn-cpp{
+    top: -93%;
+    left: -146px;
+}
+.ctn-cpp::after{
+    transform: rotateZ(315deg);
+    left: 80%;
+    bottom: -8%;
+    border-color: #F05524 transparent transparent transparent;
+    
+}
+
+.competence-cpp{ transform: rotateZ(405deg);}
+.competence-cpp img{transform: rotateZ(90deg); }
+#cercle-center .competence-cpp span{
+    width: auto;
+    border: none;
+    transform: rotateZ(-405deg);
+    left: 15px;
+}
+.competence-cpp::after{background-color:#F05524;}
+
+/*plan positisonnement competencce*/
+
+#cercle-center span{
+    position: absolute;
+    width: 90vh;
+    border-bottom: 2px solid black;
+    z-index: 1;
+}
+#cercle-center span:nth-child(2){
+    border-color: chartreuse;
+    transform: rotateZ(90deg);
+}
+#cercle-center span:nth-child(3){
+    border-color: rgb(255, 145, 0);
+    transform: rotateZ(45deg);
+}
+
+#cercle-center span:nth-child(2):after{
+    position: absolute;
+    content: "";
+    width: 90vh;
+    border-bottom: 2px solid black;
+    border-color: rgb(0, 38, 255);
+    transform: rotateZ(45deg);
+} 
+
+
+
+
 
 
 
