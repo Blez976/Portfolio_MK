@@ -13,7 +13,7 @@
    version="1.1"
    id="svg888"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="logo_k.svg">
+   sodipodi:docname="logo_k_favicon.svg">
   <defs
      id="defs882" />
   <sodipodi:namedview
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -59,7 +59,7 @@
      transform="translate(-64.907949,-94.313195)">
     <path
        id="path40-2"
-       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke-width:0.365001;stroke-miterlimit:4;stroke-dasharray:none"
+       style="display:inline;opacity:1;fill:#ff1742;fill-opacity:1;stroke-width:0.365001;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 89.700857,94.431278 -11.06584,11.151282 4.889621,4.89531 4.889622,4.89479 h -1.5875 -1.5875 l -4.957835,-4.96353 -4.958349,-4.96352 10.842472,-11.030378 -2.205279,0.0016 -5.065836,5.080827 -6.080764,6.085411 5.816697,5.82084 5.816179,5.82083 h 3.860747 c 2.123418,0 3.851262,0.0669 3.921382,-0.003 0.07012,-0.0701 -2.373282,-2.81184 -5.511467,-5.94114 l -5.705593,-5.69009 10.856581,-11.168635 z m -24.692908,-0.01219 1.418001,1.903561 h 3.654556 3.655071 v 1.190625 1.190625 h -2.430858 -2.430858 l 0.760676,0.79375 0.802249,0.795831 2.421843,-0.002 h 2.464447 v -2.910436 -2.967849 l -5.274237,0.0096 z m 7.933872,14.771702 -1.587493,-1.48229 v 9.53431 l 2.97501,-0.003 2.683658,0.003 c 0.0033,-1.49931 0.01005,-4.72211 0.0098,-4.60622 v 0 l -1.68622,-1.32131 v 3.96875 h -1.190624 -1.190624 z"
        sodipodi:nodetypes="ccccccccccccccsscccccccccccccccccccccccccccccccc"
        inkscape:export-xdpi="96"

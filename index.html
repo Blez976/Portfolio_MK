@@ -5,17 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
+    <link rel="icon" href="./asset/icone/logo_k_favicon.svg" >
     <!--a completer-->
     <title>Portfolio_M.K</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- icone -->
+    <script src="https://kit.fontawesome.com/b7d9c4cd72.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- cnd: animation, swiper,  -->
+    
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- stylisation -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+     
 
 </head>
 
 <body>
+    
     <!--Bare de navigation-->
     <div  id="sidebar" >
 
@@ -28,275 +38,414 @@
             <ul>  
 
                 <li>
-                    <a href="#about" class="icone-about selectMenu-hover ">
-                        <img src="asset/icone/icons8-contacts-150.png" alt="icone-about">
+                    <a href="#about" data-title="A propos" class="icone-about selectMenu-hover ">
+                        <img src="asset/icone/user-tie-solid.svg" alt="icone-about" style="width: 30px;">
                         <span>A propos </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#parcours" class="icon-parcours selectMenu-hover">
-                        <img src="asset/icone/icons8-identification-documents-90.png" alt="icon-parcours">
+                    <a href="#parcours" data-title="Parcours" class="icon-parcours selectMenu-hover">
+                        <img src="asset/icone/sac.png" alt="icon-parcours">
                         <span>Parcours</span>
                     </a>
                 </li>
+                
                 <li>
-                    <a href="#competence" class="icon-competence selectMenu-hover">
-                        <img src="asset/icone/icons8-placeholder-thumbnail-xml-100.png" alt="icon-competence">
+                    <a href="#competence" data-title="Compétence" class="icon-competence selectMenu-hover">
+                        <img src="asset/icone/code.png" alt="icon-competence" style="width: 30px;">
                         <span>Compétence</span>
                     </a>
                 </li>
+                
+                
                 <li>
-                    <a href="#portfolio" class="icon-portfolio selectMenu-hover">
-                        <img src="asset/icone/icons8-business-52.png" alt="icon-portfolio">
+                    <a href="#portfolio" data-title="Portfolio" class="icon-portfolio selectMenu-hover">
+                        <img src="asset/icone/briefcase-solid.svg" alt="icon-portfolio" style="width: 32px;">
                         <span>Portfolio</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contact" class="icon-contact selectMenu-hover">
-                        <img src="asset/icone/icons8-contacts-96.png" alt="icon-contact">
+                    <a href="#contact" data-title="Contact"  class="icon-contact selectMenu-hover">
+                        <img src="asset/icone/address-book-solid.svg" alt="icon-contact" style="width: 32px;">
                         <span>Contact</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-
-
-
     </div>
+
     <!--Navbar version mobile -->
     <header id="navBarMobile">
+
         <h2 id="titreSection">A propos</h2>
-        <a id="btnOpenMenu" href="javascript:void(0);" ><img
-                src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="icone-menu"></a>
+        <a id="btnOpenMenu" href="javascript:void(0);" ><img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="icone-menu"></a>
 
     </header>
+
     <!--container-->
     <main>
+        
         <!--section a propos-->
-        <section id="about" class="container section-apropos  ">
+        <section id="particles-js" class="w-100"  >
             
-            <div class="cadre-titre-sectionLg">
-                 <h2>A propos</h2>
-             </div>
-            <div id="cardRotationY" class="container-md ">
-                <!--carte face de devant-->
-                <div class="container carte-visite carte-visite-face row  flex-mobile-column  ">
+            <div id="about" class="container section-apropos position-absolute  " style="left: 0; right:0">
+                
+                <div class="cadre-titre-sectionLg">
+                    <h2>A propos v3</h2>
+                </div>
 
-                    <div class="cadre-image "> <img src="asset/icone/logo_k.svg" alt="logo"></div>
-                    <span class="trait-vertical "></span>
+                <div id="cardRotationY" class="container-md d-none d-md-block  ">
+                    <!--carte face de devant-->
+                    <div class="container carte-visite carte-visite-face d-flex  ">
+
+                        <div class="carte-zone-logo "> <img src="asset/icone/logo_k.svg" alt="logo"></div>
+                        <span class="trait-vertical "></span>
+                        <div>
+                            <h1>Kartoibidine Moussa</h1>
+                            <h3>Developpeur Web & Mobile</h3>
+                        </div>
+                        
+                    </div>
+
+                    <!--carte face de derriere-->
+                    <div  class="container carte-visite carte-visite-dos row justify-content-center">
+                        
+                        <h3>A propos de moi</h3>
+                        <p>
+                            Je me nomme Kartoibidine Moussa. Titulaire d’un baccalauréat scientifique, 
+                            j'ai voulu faire de ce qui était pour moi au départ un loisir, mon
+                            métier. Je me suis donc lancé dans la conception dès mon jeune âge. Ma venue
+                            dans la ville de Brest m'a permis de découvrir le FABLAB où j'ai pu apprendre ce
+                            qu’était un Hackathon et participer aussi à la création d’atelier d’informatique
+                            pour adultes. Ces nouvelles expériences ont contribué à parfaire plusieurs de mes
+                            qualités notamment le travail en équipe, la ponctualité et une rigueur au
+                            quotidien. Certifié développeur web et web mobile depuis peu, j’aime accroître
+                            mes connaissances dans l’informatique et les nouvelles technologies. Avec ce
+                            portfolio, je souhaite tout d’abord mettre en exergue mes aptitudes et mes
+                            atouts en tant que concepteur web. <br> <br>
+                            Je reste à votre disposition pour toutes questions ou demande. N’hésitez pas
+                            à me contacter.
+                        </p>
+
+                        <a href="./asset/moussa.kartoibidine(CV).pdf" class="btn-call btn-download " download target="_blank">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download mx-2" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                            </svg>Télécharger CV
+
+                        </a>
+                        
+                        <button type="button" class="btn-call btn-contact" onclick="window.location.href = '#contact';">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope mx-2" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                              </svg> Contact
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- vs mobile -->
+
+                <div class="carte-mobile d-block d-md-none">
+
+                    <div class="avatar-logo ">
+                      <img class="position-absolute top-50 start-50 translate-middle" src="asset/icone/logo_k.svg" alt="logo" height="110" width="100">
+                    </div>
+
                     <h1>Kartoibidine Moussa</h1>
                     <h3>Developpeur Web & Mobile</h3>
-                    
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Tenetur sunt commodi fuga, aspernatur repudiandae nam animi, assumenda,
-                        ab possimus placeat harum dolore quasi. Placeat consequatur ratione nulla
-                        quisquam quos error illo itaque unde pariatur vel, minus esse vero quidem,
-                        dicta alias saepe ut ullam blanditiis, explicabo voluptas cupiditate quae illum
-                        quaerat in. Voluptate eaque ea obcaecati? Facere voluptatibus temporibus nihil,
-                        minus voluptas soluta iste in qui, recusandae maxime, quasi quae.
-                        Error veritatis dolorum adipisci harum.
-                    </p>
-                    <button type="button" class="btn btn-download"
-                        onclick="window.carteVisiteDoslocation.href = 'https://fr.w3docs.com/';">
-                        <img src="https://img.icons8.com/ios/150/FFFFFF/download-2--v1.png"
-                            alt="icone telechargement cv"> Télécharger CV
-                    </button>
-                    <button type="button" class="btn btn-contact"
-                        onclick="window.location.href = 'https://fr.w3docs.com/';">
-                        <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/secured-letter--v3.png"
-                            alt="icone mail contact"> Contact
-                    </button>
+                    <p>Je me nomme Kartoibidine Moussa. Titulaire d’un baccalauréat scientifique, 
+                        j’ai voulu faire de ce qui était pour moi au départ un loisir, mon
+                        métier. Je me suis donc lancé dans la conception dès mon jeune âge.</p>
+                    <p>Ma venue
+                        dans la ville de Brest m’a permis de découvrir le FABLAB où j’ai pu apprendre ce
+                        qu’était un Hackathon et participer aussi à la création d’atelier d’informatique
+                        pour adultes. Ces nouvelles expériences ont contribué à parfaire plusieurs de mes
+                        qualités notamment le travail en équipe, la ponctualité et une rigueur au
+                        quotidien.</p>
+                    <p> Certifié développeur web et web mobile depuis peu, j’aime accroître
+                            mes connaissances dans l’informatique et les nouvelles technologies. Avec ce
+                            portfolio, je souhaite tout d’abord mettre en exergue mes aptitudes et mes
+                            atouts en tant que concepteur web.
+                            Je reste à votre disposition pour toutes questions ou demande. N’hésitez pas
+                            à me contacter.</p>
 
+                    <div class="d-flex flex-column align-items-center">
+
+                        <a href="./asset/moussa.kartoibidine(CV).pdf" class="btn-call btn-download " download target="_blank">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download mx-2" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                            </svg>Télécharger CV
+
+                        </a>
+                        <button type="button" class="btn-call btn-contact"
+                            onclick="window.location.href = '#contact';">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope mx-2" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                              </svg> Contact
+                        </button>
+
+                    </div>
                 </div>
-                <!--carte face de derriere-->
-                <div  class="container carte-visite carte-visite-dos row justify-content-center">
-                     
-                    <h3>A propos de moi</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Tenetur sunt commodi fuga, aspernatur repudiandae nam animi, assumenda,
-                        ab possimus placeat harum dolore quasi. Placeat consequatur ratione nulla
-                        quisquam quos error illo itaque unde pariatur vel, minus esse vero quidem,
-                        dicta alias saepe ut ullam blanditiis, explicabo voluptas cupiditate quae illum
-                        quaerat in. Voluptate eaque ea obcaecati? Facere voluptatibus temporibus nihil,
-                        minus voluptas soluta iste in qui, recusandae maxime, quasi quae.
-                        Error veritatis dolorum adipisci harum.
-                     </p>
-                     <button type="button" class="btn btn-download"
-                        onclick="window.location.href = 'https://fr.w3docs.com/';">
-                        <img src="https://img.icons8.com/ios/150/FFFFFF/download-2--v1.png"
-                            alt="icone telechargement cv"> Télécharger CV
-                    </button>
-                    <button type="button" class="btn btn-contact"
-                        onclick="window.location.href = 'https://fr.w3docs.com/';">
-                        <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/secured-letter--v3.png"
-                            alt="icone mail contact"> Contact
-                    </button>
-                </div>
-            </div>
+            </div> 
+
+           
         </section>
 
-        <!-- section Parcours -->
-        <section id="parcours" class="container row section-parcours justify-content-center ">
-            <!--resume etude-->
-                 <div class="cadre-titre-sectionLg" >
-                     <h2>Parcours</h2>
+        <!-- section Parcours v2-->
+        <section id="parcours" class="container row section-parcours justify-content-center">
+           
+            <div class="cadre-titre-sectionLg mb-5" >
+                <h2>Parcours </h2>
+            </div>
+            
+            <div class="resume">
+                <!--resume etude-->
+                <div class=" mb-5" >
+                
+                    <div class="d-flex justify-content-center w-100 mb-5  ">
+                        <div class="etiquette d-flex justify-content-center align-items-center "> 
+                            <h3> Education</h3> 
+                        </div> 
+                    </div>
+                    
+                    <div class="timeline position-relative h-100 ">
+                        <!--ligne au centre-->
+                        <div class="timeline-bar"></div>
+
+                        <div data-aos="fade-up" class=" etiquette-icone d-flex position-absolute">
+                            <img src="asset/icone/study.svg" alt="icone experience" style="width:30px;height: 30px; filter: invert(36%) sepia(90%) saturate(7141%) hue-rotate(310deg) brightness(115%) contrast(126%);"/>
+                        </div>
+                         <!--container card education-->
+                        <div class="timeline-inner position-relative">
+
+                            <div data-aos="fade-up" class="educ-1 timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">Développeur Web & Mobile</h4>
+                                <span class="item-period">2021-2022</span>
+                                <span class="item-small">Afpa, Brest (29200).</span>
+                                <p class="item-description">
+                                    • Développement de site web avec WordPress, HTML, CSS, PHP, Symfony,javascript <br>
+                                    • Conception et gestion de bases de données avec MySQL <br>
+                                    • Intégration de maquettes
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up" class=" educ-2 timeline-item timeline-item-right col-md-5 position-absolute">
+                                <h4 class="item-title">Informatique</h4>
+                                <span class="item-period">2020</span>
+                                <span class="item-small">Tremplin Numérique, Brest (29200).</span>
+                                <p class="item-description">
+                                    • Découverte du monde du Numérique : <br>
+                                    - Fablab <br>
+                                    - language de programation <br>
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up" class=" educ-3 timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">1ère année DUT informatique</h4>
+                                <span class="item-period">2018-2019</span>
+                                <span class="item-small">IUT de Vannes, Vannes (56000)</span>
+                                <p class="item-description">
+                                    • Développement de sites web avec WordPress, HTML, CSS <br>
+                                    • Conception et gestion de bases de données avec MySQL <br>
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up" class="educ-4 timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">Bac scientifique</h4>
+                                <span class="item-period">2017-2018</span>
+                                <span class="item-small">Lycée de Dembeni, Tsararano (97660)</span>
+                                <p class="item-description">
+                                    •Spécialité mathématiques
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="cadre-cont-parcours offset-xl-1 col-xl-4 offset-lg-1 col-lg-5 offset-md-1 col-md-7  col-sm-11 col-11 ">
-                    
-                    <h4 class="cadre-titre-parcours"><img src="https://img.icons8.com/ios/50/FF7B36/book-and-pencil.png" alt="icone etude"/>Education</h4>
-                    <div>
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/pastel-glyph/64/FF7B36/student-male--v2.png" alt="icone etude"/></span>
-                        
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
+
+                <!--resume experiance -->
+                <div class="experience mb-5 pt-5" >
+
+                    <div  class="d-flex justify-content-center w-100 mb-5">
+                        <div data-aos="fade-up"  class="etiquette etiquette-experience d-flex justify-content-center align-items-center" >
+                            <h3>Expérience</h3>
+                        </div>   
                     </div>
 
-                    <div>
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/pastel-glyph/64/FF7B36/student-male--v2.png" alt="icone etude"/></span>
+                    <div class="timeline position-relative h-100 ">
+                        <!--ligne au centre-->
                         
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
-                    </div>
+                        <div data-aos="fade-up" class=" etiquette-icone d-flex position-absolute">
+                            <img src="asset/icone/Orion_briefcase.svg" alt="icone experience" style="width:30px;height: 30px; filter: invert(36%) sepia(90%) saturate(7141%) hue-rotate(310deg) brightness(115%) contrast(126%);"/>
+                        </div>
+                         <!--container card education-->
+                        <div class="timeline-inner position-relative">
 
-                    <div>
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/pastel-glyph/64/FF7B36/student-male--v2.png" alt="icone etude"/></span>
-                        
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
+                            <div data-aos="fade-up" class="educ-1 timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">Stage - Développeur Web full stack</h4>
+                                <span class="item-period">2021-2022</span>
+                                <span class="item-small">Rémi Chardon, Quimper (29000).</span>
+                                <p class="item-description">
+                                    • Développement de site web avec WordPress, HTML, CSS, PHP, Symfony,javascript <br>
+                                    • Intégration de maquettes <br>
+                                    <a href="https://www.question-eurasier.fr/" target="_blank">Voir le site</a>
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up"   class=" educ-2 timeline-item timeline-item-right col-md-5 position-absolute">
+                                <h4 class="item-title">Bénévolat (animateur, Réferent Electronique)</h4>
+                                <span class="item-period">2020</span>
+                                <span class="item-small">Les Petits Débrouillards, Brest (29200).</span>
+                                <p class="item-description">
+                                    •	Organiser un hackathon <br>
+                                    •	Réferent pour débegug au niveau du code et des compasant éléctronique
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up" class="educ-3  timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">Bénévolat (animateur)</h4>
+                                <span class="item-period">2019</span>
+                                <span class="item-small">Médiacap, Vannes (56000)</span>
+                                <p class="item-description">
+                                    •	Création d’ateliers pour adultes dans l’apprentissage ou le perfectionnement en informatique.
+                                </p>
+                            </div>
+
+                            <div data-aos="fade-up"  class="educ-4  timeline-item timeline-item-left col-md-5 position-absolute">
+                                <h4 class="item-title">Développeur Web </h4>
+                                <span class="item-period">2018-2019</span>
+                                <span class="item-small">La coop des Vénètes , Vannes (56000)</span>
+                                <p class="item-description">
+                                    •	Réalisation d’un site moderne avec WordPress <br>
+                                    •	Ajout d’un moyen de payement <br>
+                                    •	Ajout d’une partie adhésion 
+                                </p>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
-            <!-- resumer expériance-->
-                <div class=" cadre-cont-parcours offset-xl-1 col-xl-4 offset-lg-1 col-lg-5 offset-md-1 col-md-7  col-sm-11 col-11 ">
-                    
-                    <h4 class="cadre-titre-parcours"><img src="https://img.icons8.com/ios/42/FF7B36/briefcase.png" alt="icone experience"/>    Expérience</h4>
-                    <div>
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/ios/50/FF7B36/business.png" alt="icone experience"/></span>
-                        
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
-                    </div>
-
-                    <div >
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/ios/50/FF7B36/business.png" alt="icone experience"/></span>
-                        
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
-                    </div>
-
-                    <div>
-                        <span class="ligne-vetical-parcours"><img src="https://img.icons8.com/ios/50/FF7B36/business.png" alt="icone experience"/></span>
-                        
-                    
-                        <P class="resume-parcours">
-                            <span class="date">2021-2022 : Afpa, Brest</span> <br><br>
-                            <strong>Developpeur Web & Mobile</strong> <br> 
-                            1ère année à la Faculté technologique d'ingénierie - Département : ingénierie technique de matériel médical
-                        </P>
-                    </div>
-                </div>  
+            </div>   
+                
         </section>
 
         <!-- section compétences --> 
-        <section id="competence" class="container row section-competence justify-content-center">
+        <section id="competence" class="container row section-competence justify-content-center overflow-hidden">
             <div class="cadre-titre-sectionLg" >
                 <h2>Compétence</h2>
            </div>
-           <div class="container d-flex container-competence justify-content-center align-items-center">
-              <div id="cercle-center">
-                <span></span>
-                <span></span>
-                <span></span>
-                <div class="ctn ctn-react">
-                    <div class="cercle-competence competence-react"> 
-                    <span> React-native</span>
-                    <img src="https://img.icons8.com/ios-filled/38/FFFFFF/react-native.png" alt="icone-react"/>
-                    
+        
+           
+           
+           <div class=" row w-100  justify-content-center align-items-center mt-xs  mt-md-5 mt-lg-0" style="margin-top:25rem">
+
+               <div data-aos="fade-right" class=" competence-aos col-md-8 col-md-offset-4 col-lg-5" style=" margin-left: 30px;">
+                 <img src="./asset/image/programming-animate.svg" alt="illustration">
+                </div>
+
+                <div data-aos="fade-left" class=" competence-aos tableau px-0 pt-5 col-md-10 col-lg-6" style="height: 70vh; background-color: #465a64; ">
+
+                    <div class=" d-flex position-absolute bd-highlight w-100" style="top: 0; height:3rem ;background-color: #1768FF;">
+                           
+                        <div class="h-100 container-tableau  swiper mySwiper ">
+                            <!-- titre  -->
+                            <div class="swiper-wrapper container ">
+                                
+                                <div class=" title-lg-web swiper-slide d-flex justify-content-center align-items-center">
+                                    <h3 style="font-size: 20px;">Compétence web</h3>
+                                </div>
+
+                                <div class="title-lg-web  swiper-slide d-flex justify-content-center align-items-center">
+                                    <h3 style="font-size: 20px;">Outils Développement</h3>
+                                </div>
+
+                                <div class="title-lg-web  swiper-slide d-flex justify-content-center align-items-center">
+                                    <h3 style="font-size: 20px;">Autre compétence</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="btn-illustre p-2 bd-highlight d-none d-sm-block" >
+                            <span class="btn-round"></span>
+                            <span class="btn-round"></span>
+                            <span class="btn-round"></span>
+                        </div>
+                        
+                    </div>
+
+                    <div class="h-100 container-tableau competence-title swiper mySwiper ">
+
+                        <div class="swiper-wrapper container">
+                            <!-- Language web -->
+                            <div class="swiper-slide d-flex justify-content-center">
+                                
+                                <div class="row my-5" style="width:60% ;">
+                                    <div class="card-Skill" title="HTML5"><i class="fa-brands fa-html5 fa-3x"></i></div>
+                                    <div class="card-Skill" title="CSS3"><i class="fa-brands fa-css3-alt fa-3x"></i></div>
+                                    <div class="card-Skill" title="Booststrap"><i class="fa-brands fa-bootstrap fa-3x"></i></div>
+                                    <div class="card-Skill" title="PHP"><i class="fa-brands fa-php fa-3x"></i></div>
+                                    <div class="card-Skill" title="Symfony"><i class="fa-brands fa-symfony fa-3x"></i></div>
+                                    <div class="card-Skill" style="flex-direction:column ;" title="MySQL">
+                                        <img src="./asset/icone/mysql.png" alt="icone mysql" style="width:24px; height: 26px;filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(306deg) brightness(103%) contrast(101%); "> 
+                                        <h6 class="fw-bold">MySQL</h6>
+                                    </div>
+                                    <div class="card-Skill" title="Python"><i class="fa-brands fa-python fa-3x"></i></div>
+                                    <div class="card-Skill" title="WordPress"><i class="fa-brands fa-wordpress fa-3x"></i></div>
+                                    
+                                    <div class="card-Skill" title="jQuery"><img src="./asset/icone/jquery.png" alt="icon-jquery" style="width: 50px;"></div>
+                                    
+                                </div>
+                                
+                            </div>
+
+                        
+                            <!-- Outils utiliser -->
+                            <div class="swiper-slide d-flex justify-content-center">
+                                <div class="row my-5" style="width:60% ; height: 45%;">
+                                    <div class="card-Skill" title="Windows"><i class="fa-brands fa-windows fa-3x"></i></div>
+                                    <div class="card-Skill" title="Figma"><i class="fa-brands fa-figma fa-3x"></i></div>
+                                    <div class="card-Skill" title="NodeJs"><i class="fa-brands fa-node fa-3x"></i></div>
+                                    <div class="card-Skill" title="Vscode"><img src="./asset/icone/vscode.png" alt="icone-vscode" style="width: 50px;"></div>
+                                    <div class="card-Skill" title="Git"><i class="fa-brands fa-git-alt fa-3x"></i></div>
+                                    
+                                </div>
+                                
+                            </div>
+
+
+                            <!-- autre competence -->
+
+                            <div class="swiper-slide d-flex justify-content-center">
+                                <div class="row my-5" style="width:60% ; height: 45%;">
+                                    <div class="card-Skill" title="C++"><img src="./asset/icone/cpp.png" alt="cpp" style="filter:invert(100%); width:50px;"></div>
+                                    <div class="card-Skill" title="Linux"><i class="fa-brands fa-linux fa-3x"></i></div>
+                                    <div class="card-Skill" title="React-native"><i class="fa-brands fa-react fa-3x"></i></div>
+                                </div>
+                                
+                            </div>
+
+
+                            
+                        </div>
+    
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+    
                     </div>
                 </div>
 
-                <div class="ctn ctn-wordpress">
-                    <div class="cercle-competence competence-wordpress"> 
-                        <span> Wordpress</span>
-                        <img src="https://img.icons8.com/ios-filled/38/FFFFFF/wordpress--v1.png" alt="icone-wordpress"/>
-                        
-                    </div>
-                </div>
-                <div class="ctn ctn-python">
-                    <div class="cercle-competence competence-python"> 
-            
-                        <span> Python</span>
-                        <img src="https://img.icons8.com/ios-filled/38/FFFFFF/python.png" alt="icone-python"/>
-                        
-                    </div>
-                </div>
-                
-                <div class="ctn ctn-html">
-                    <div class="cercle-competence competence-html "> 
-                        <span> HTML</span>
-                        <img src="https://img.icons8.com/material-outlined/38/FFFFFF/html-5.png" alt="icone-html"/>
-                        
-                    </div>
-                </div>
-
-                <div class="ctn ctn-css">
-                    <div class="cercle-competence competence-css "> 
-                        <span> CSS</span>
-                        <img src="https://img.icons8.com/ios/38/FFFFFF/css3.png" alt="icone-css"/>
-                        
-                    </div>
-                </div>
-
-                <div class="ctn ctn-js">
-                    <div class="cercle-competence competence-js"> 
-                        <span> Javascript</span>
-                        <img src="https://img.icons8.com/ios-filled/38/FFFFFF/javascript-logo.png" alt="icone-javascript"/>
-                        
-                    </div>
-                </div>
-                
-                <div class="ctn ctn-mysql">
-                    <div class="cercle-competence competence-mysql"> 
-                        <span> Mysql</span>
-                        <img src="https://img.icons8.com/ios-filled/65/FFFFFF/mysql-logo.png" alt="icone-mysql"/>
-                        
-                    </div>
-                </div>
-                <div class="ctn ctn-cpp">
-                    <div class="cercle-competence competence-cpp "> 
-                        <span> C++</span>
-                        <img src="https://img.icons8.com/ios-filled/38/FFFFFF/c-plus-plus-logo.png" alt="icone-cpp"/>
-                        
-                    </div>
-                </div>
                 
            </div>
-              
-              
-           </div>
+           
         </section>
 
         <!-- section portfolio --> 
@@ -307,81 +456,186 @@
                 <h2>Portfolio</h2>
            </div>
            
-            <nav class="menu-portfolio d-flex justify-content-center">
-                <a class="select-next-mob" href="#">Web</a>
-                <a href="#">App</a>
-                <a href="#">Electronique</a>
-                <a href="#">Certificat</a>
-                <div class="animation start-home"></div>
-              
-            </nav>
-            <!--realisation web-->
-            <article class="container row container-realisation flex-wrap justify-content-center pt-5 animate__animated">
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9 gy-5 mx-3 card-realisation">
-                    <img src="asset/image/coopVenete.jfif" alt="photo">
-                    <figcaption class="legende-realissation col-12">La coop des venetes</figcaption>
-                </figure>
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9  gy-5 mx-3 card-realisation">
-                    <img src="asset/image/web1.jpg" alt="photo">
-                    <figcaption class="legende-realissation"> www1 futur</figcaption>
-                </figure>
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9  gy-5 mx-3 card-realisation">
-                    <img src="asset/image/web2.jpg" alt="photo">
-                    <figcaption class="legende-realissation"> www2 futur</figcaption>
-                </figure>
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9 gy-5 mx-3 card-realisation">
-                    <img src="asset/image/web1.jpg" alt="photo">
-                    <figcaption class="legende-realissation"> www3 futur</figcaption>
-                </figure>
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9 gy-5 mx-3  card-realisation">
-                    <img src="asset/image/web2.jpg" alt="photo">
-                    <figcaption class="legende-realissation"> www4 futur</figcaption>
-                </figure>
-                <figure class=" col-xl-3 col-lg-3 col-md-5 col-sm-8 col-9 gy-5 mx-3  card-realisation">
-                    <img src="asset/image/web1.jpg" alt="photo">
-                    <figcaption class="legende-realissation"> www5 futur</figcaption>
-                </figure>
+           
+           
+            <div class="row w-100" style="margin-top:10rem">
+                <!-- button navigation fortfolio -->
+                 <div class="menu-portfolio d-flex justify-content-center mb-5">
                 
-              
-            </article>
+                    <ul class="navbar-portfolio ">
+                        <li id="btn-web" class="menu-active" data-filter="web">Web</li>
+                        <li id="btn-diy" data-filter="diy">DIY</li>
+                        <li id="btn-cert" data-filter="certification">Certification</li>
+                    </ul>
+                    
+                 </div>
 
+                 <!-- realisation -->
+                <div id="containerRealisation" class="tableau-projet row  h-auto mb-5 container ps-lg-5 ms-lg-5 ps-md-3 ms-md-3">
+                    
+                    <!-- test -->
+                    <!-- <div class="card-realisation col-lg-3" style="height: 16rem ;" data-filter="web">
+                        
+                        <img src="https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg" alt="">
+                        <div class="card-realisation-info">
+                            <h3>La coope des venetes</h3>
+                            <p>Site web</p>
+                        </div>
+                    </div> -->
+                    
+                    
+                    
+
+                    
+
+                </div>
+                
+
+               
+  
+                    <!-- Modal -->
+                    <div class="modal fade" id="Modal" tabindex="-1"  aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Modal title / Electronique </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body-head">
+                                     <img id="modalImg" src="https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_960_720.jpg" alt="">
+                            </div>
+                            <div class="modal-body">
+                                <p id="realDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nihil tempore perspiciatis modi adipisci commodi a facere nostrum, sunt unde rem accusantium laudantium vero dolore neque ducimus facilis nesciunt? Nihil!</p>
+                                <h6 class="fw-bold fs-6">Construit avec :</h6>
+                                <ul id="listLanguage" class="ps-4">
+                                    <li>langue </li>
+                                    <li>langue</li>
+                                    <li>langue</li>
+                                    <li>langue</li>
+                                </ul>
+                                <a id="lien-projet" href="" class="btn btn-outline-primary my-3" target="_blank" >Voir le projet</a>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+             </div>
+             
           
            
         </section>
-
-        <section id="contact" class="container d-flex justify-content-center ">
+         
+        <!-- contact -->
+        <section id="contact" class="container d-flex justify-content-center mb-5 overflow-hidden " >
 
             <div class="cadre-titre-sectionLg" >
                 <h2>Contact</h2>
             </div>
-            <div class=" container row justify-content-center container-formulaire">
-                 <h3>Me contacter</h3>
-               <form action="" method="POST" >
             
-                    <input type="text" id="pseudo" name="pseudo" placeholder="Nom" required > <br>
-         
-                    <input type="email" id="email" name="email" placeholder="E-mail" required > <br>   
-                    
-                    <input type="text" id="sujet" name="sujet" placeholder="Sujet" required > <br>
-                    
-                    
-                    <textarea type="text" id="commentaire" name="commentaire" cols="30" rows="10" placeholder="Message" required > </textarea> <br>
-         
-                  
-                    <input type="submit"  name="inscription" value="Envoyer" > 
-         
-              </form>
-          </div>
+            <div class="row w-100 mt-5 justify-content-center align-items-center">
+
+                <div data-aos="fade-right" class=" competence-aos mt-5 col-md-8 col-md-offset-4 col-lg-5" >
+                    <img src="./asset/image/feedback-animate.svg" alt="illustration">
+                </div>
+
+                <div data-aos="fade-left" class="competence-aos col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
+                    <div class="email-signature mb-5">
+                        <div class="signature-icon">
+                            <div class="cadre-image " > <img src="asset/icone/logo_k.svg" style="width: 70px;" alt="logo"></div>
+                        </div>
+                        <div class="signature-detail">
+                            <h2 class="title">Kartoibidine MOUSSA</h2>
+                            <span class="post">Developpeur web</span>
+                        </div>
+                        <ul class="icon d-none">
+                            <li><a href="" class="fa fa-facebook"></a></li>
+                            <li><a href="" class="fa fa-google-plus"></a></li>
+                            <li><a href="" class="fa fa-twitter"></a></li>
+                        </ul>
+                        <ul class="signature-content">
+                            <li><span>E</span> <a href="mailto:kartoibidine.moussa@gmail.com?subject=Contact a partir du contact via le site portfolio_M.K.com">kartoibidine.moussa@gmail.com</a> </li>
+                            <li><span>M</span>07 66 55 65 43</li>
+                            <li><span>A</span>Brest</li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <a  id='btnHautPas' href="#about"> <img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-up.png" alt=" fleche haut"/></a>
+        <a  id='btnHautPas' href="#about"><img src="./asset/icone/up.svg" alt="up home" style="width: 50px;"></a>
+
+
+        <footer class="container text-center text-lg-start">
+            
+            <div class="modal fade" id="modal-mention-legal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Mentions légales</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        
+
+                        <p style="text-align:justify">
+                          
+                            <strong>1. Informations légales :</strong> <br> <br>
+                           
+                            Statut du propriétaire : <strong>particulier</strong><br/>
+                            Le Propriétaire est : <strong>Kartoibidine Moussa</strong><br/>
+                            Adresse postale du propriétaire : <strong> 29200 Brest</strong><br/>
+                            <br>
+                            Le Webmaster est  : <strong>Kartoibidine Moussa</strong> <br />
+                            Contacter le Webmaster :  <strong><a href="mailto:kartoibidine.moussa@gmail.com?subject=Contact a partir des mentions l'égales via le site portfolio_M.K.com">kartoibidine.moussa@gmail.com</a></strong><br />
+                            L’hebergeur du site est : <strong>github</strong><br />
+                            <strong><u>CREDIT :</u> </strong> Source des illustrations <br>
+                        
+                            <a href="https://storyset.com/web" target="_blank">Web illustrations by Storyset</a>
+                                <br>
+                            <a href="https://storyset.com/online"  target="_blank">Online illustrations by Storyset</a> 
+                            
+                        </p>
+                            
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+          
+        
+          
+            <!-- Copyright -->
+            <div class="text-center p-3" >
+              © <span id="annee"></span>  Copyright:
+              <a class="link-light" href="">Portfolio-MK.com</a> | <a href="javascript:void(0);" class="text-decoration-none text-white " data-bs-toggle="modal" data-bs-target="#modal-mention-legal"> Mentions légales </a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+          
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
      <script src="js/swiped-events.js"></script>
+     <script src="js/app.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+        AOS.init();
+      </script>
+
+    
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <script  src="./js/realisation.js"></script>
     <script src="./js/script.js"></script>
+    
+    
 </body>
 
 </html>

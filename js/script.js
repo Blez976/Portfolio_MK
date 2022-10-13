@@ -3,50 +3,29 @@
 //---------------------------------
 
 let titreSection = document.getElementById('titreSection');
-let clickSection = document.querySelectorAll('.selectMenu-hover'); //nodeList 
+let itemMenu = document.querySelectorAll('.selectMenu-hover'); //nodeList 
+let section = document.querySelectorAll('section');
 let btnBackHome = document.getElementById('btnHautPas');
 
-window.addEventListener('scroll',function(){
-     //console.log(window.scrollY);
-     
-   //La méthode forEach() permet d'exécuter une fonction donnée sur chaque élément du tableau.
-   [].forEach.call(clickSection, function (itemMenu) {
-      
-      if(window.scrollY > 801){
-         btnBackHome.style.display = 'block';
-      }else{btnBackHome.style.display = 'none';}
 
-      if(window.scrollY < 801){
-         //console.log("apropos");
-         titreSection.textContent = "A propos";
-         itemMenu.classList.remove('seclect-items-nav'); // le forEach.call, permet d'appliquer le remove pour chaque balise qui le nom de class  selectMenu-hover
-         clickSection[0].classList.add('seclect-items-nav');
-         
-         
-         
-       }else if(window.scrollY == 801 || window.scrollY < 2432){
-         //console.log("parcours");
-         titreSection.textContent = "Parcours";
-         itemMenu.classList.remove('seclect-items-nav');
-         clickSection[1].classList.add('seclect-items-nav');
-         
-       }else if(window.scrollY == 2432 || window.scrollY < 3406){
-         //console.log("competence");
-         titreSection.textContent = "Compétence";
-         itemMenu.classList.remove('seclect-items-nav');
-         clickSection[2].classList.add('seclect-items-nav');
+function activeMemu()
+{
+   let lengthSection = section.length;
 
-      }else if(window.scrollY == 3406 || window.scrollY < 5000){
-        // console.log("portfolio");
-         titreSection.textContent = "Portfolio";
-         itemMenu.classList.remove('seclect-items-nav');
-         clickSection[3].classList.add('seclect-items-nav');
-      }
+   while(--lengthSection && window.scrollY + 97 < section[lengthSection].offsetTop){}
+   itemMenu.forEach(item => item.classList.remove('select-items-nav'));
+   itemMenu[lengthSection].classList.add('select-items-nav');
+   titreSection.textContent = itemMenu[lengthSection].getAttribute('data-title');
 
-    });
-  
-    
-});
+   (window.scrollY > 801)? btnBackHome.style.display = 'block': btnBackHome.style.display = 'none';
+};
+activeMemu();
+
+window.addEventListener('scroll', activeMemu);
+
+
+
+
  
  /** Bar de menu version mobile */
   
@@ -76,11 +55,188 @@ window.addEventListener('scroll',function(){
     
  });
 
+ //------------------------------------------------
+ // Section Competence
+ //------------------------------------------------
+
+ let swiper = new Swiper(".mySwiper", {
+   slidesPerView: 1,
+   spaceBetween: 30,
+   loop: true,
+   autoplay: {
+      delay: 8000,
+      disableOnInteraction: true,
+    },
+   navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+   },
+   pagination: {
+     el: ".swiper-pagination",
+   },
+   
+ });
+
 //-------------------------------------------------- 
 // section portfolio
 //--------------------------------------------------
 
-let menuRealisation = document.querySelectorAll('.menu-portfolio a');
+let modal = new bootstrap.Modal(document.getElementById('Modal')); // model pour lire les resumes des realisation
+let cardReal = document.querySelectorAll('.card-realisation-info'); // card ralisation
+let menuRealisation = document.querySelectorAll('.menu-portfolio a'); // à supprimer
+
+
+// v2
+
+let contenairRealisation = document.getElementById('containerRealisation');
+let btnWeb = document.getElementById('btn-web');
+let btnDiy = document.getElementById('btn-diy');
+let btnCert = document.getElementById('btn-cert');
+
+// elems : donnees realisation
+// typereal : type de realisation (app, site ...)
+let ajoutCard = function (elems,typeReal)
+{ 
+ 
+  // code html pour rajouter des cards en fonction de la base de donnees
+  let html='';
+  for(let i= 0; i < Object.keys(elems).length; i++)
+  {
+   
+   html += ' <div class="card-realisation  col-sm-10 col-md-5 col-xl-3 my-3 mx-4  animate__animated animate__zoomIn" style="height: 16rem ;" data-filter="'+typeReal+'">';
+   html += '<img src="'+ elems[i]['img']+'" alt="">';
+   html += '<div class="card-realisation-info">';
+   html += '<h3>'+ elems[i]['titre'] +'</h3>';
+   html += '<p>'+ elems[i]['typeReal'] +'</p> </div></div>';
+   contenairRealisation.innerHTML = html;
+   }
+
+   // jquery pour mettre a jour les information sans charger la page
+   
+   $(document).ready(function(){
+
+      cardReal = document.querySelectorAll('.card-realisation-info'); // on reselection 
+
+      // afficher les information via un popup
+      cardReal.forEach( (real,index) => real.addEventListener('click', function()
+      {
+         let modalTitre = document.getElementById('ModalLabel'); // titre + type de projet
+         let realImage = document.getElementById('modalImg'); // image du projet
+         let realDescription = document.getElementById('realDescription'); // description du projet
+         let realLanguage = document.getElementById("listLanguage");  // liste des language utiliser
+         let lienProjet = document.getElementById('lien-projet');
+        
+         modalTitre.innerHTML = elems[index]['titre'] + " / "+ elems[index]['typeReal']  ;
+         realImage.setAttribute("src",elems[index]['img']);
+         realDescription.innerHTML = elems[index]['description'];
+         
+         realLanguage.innerHTML = "";
+         for (let j =0; j < Object.keys(elems[index]['language']).length; j++)
+         {
+            realLanguage.innerHTML += "<li>"+elems[index]['language'][j] +"</li>";
+ 
+         }
+         
+         //on verifie si il ya un lien pour acceder au projet
+         if( typeof elems[index]['lien'] === 'string' && Object.keys(elems[index]['lien']).length === 0 )
+         {
+           lienProjet.classList.add('d-none');
+         }
+         else
+         {
+            lienProjet.classList.remove('d-none');
+            lienProjet.setAttribute('href',elems[index]['lien']);
+         } 
+         
+       
+          modal.show();
+      }));
+
+     
+   })
+   
+}
+
+
+
+// btnAll.addEventListener('click', function(donnees)
+// {
+   
+//    donnees = data;
+
+// //    for (let key in data) {
+// //       console.log(data[key]);
+// //   }
+//    console.log(Object.keys(donnees[0]))
+//    // ajoutCard(donnees);
+
+// });
+
+btnWeb.addEventListener('click', function(donnees, realisation)
+{
+   btnWeb.classList.add("menu-active");
+   btnDiy.classList.remove("menu-active");
+   btnCert.classList.remove("menu-active");
+
+   donnees = data.web;
+   realisation = "web";
+   ajoutCard(donnees,realisation);
+   
+   
+});
+
+btnDiy.addEventListener('click', function(donnees,realisation)
+{
+   
+   btnWeb.classList.remove("menu-active");
+   btnDiy.classList.add("menu-active");
+   btnCert.classList.remove("menu-active");
+
+   donnees = data.diy;
+   realisation = "diy";
+   ajoutCard(donnees,realisation);
+
+});
+
+
+
+btnCert.addEventListener('click', function(donnees,realisation)
+{
+   btnWeb.classList.remove("menu-active");
+   btnDiy.classList.remove("menu-active");
+   btnCert.classList.add("menu-active");
+   
+   donnees = data.certification;
+   realisation = "certification";
+   ajoutCard(donnees, realisation);
+
+   let cardNonClick = document.querySelectorAll('.card-realisation-info');
+   
+   for(let i=0; i < cardNonClick.length; i++)
+   {
+      cardNonClick[i].classList.add('pe-none')
+   }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fin v2
+
+
+
+
 
 
 // données portfolio
@@ -143,7 +299,7 @@ let dataAnime = [
 
    ];
 
-let afficheurRealisation = document.querySelector('.container-realisation');
+let afficheurRealisation = document.querySelector('.container-realisation');//supprimer
 let contenueRealisation = document.querySelectorAll('.card-realisation'); 
 let legendeRealisation = document.querySelectorAll('.legende-realissation');
 let imageRealisation = document.querySelectorAll('.card-realisation img'); 
@@ -198,7 +354,7 @@ let nextRealisation = function(titreRealisation){
 }
 
 
-//Arreté l'animation au bout de 800 ms 
+      //Arreté l'animation au bout de 800 ms 
        let configAnim = function(sup) {
           setTimeout(function(){
              afficheurRealisation.classList.remove(dataAnime[sup]); // supprimer le  nom de class qui vient d'êtres ajouté par playAnimation 
@@ -212,7 +368,7 @@ let nextRealisation = function(titreRealisation){
             }, 800);// 800 ms
        };
 
-//animation aleatoir de l'afficheur de realisation
+      //animation aleatoir de l'afficheur de realisation
        let playAnimation = function(){
           
          
@@ -312,4 +468,64 @@ sectionPortfolio.addEventListener('swiped-left', function() {
    } 
    console.log('swipe-right :'+ nextSwipe);
  });
+ 
+
+/** code fin de chargement de la page */
+
+window.addEventListener('load', function(){
+
+   // section portfolio
+    ajoutCard(data.web, "web");
+
+    aosAnimate();
+})
+
+//check 
+window.addEventListener('resize', aosAnimate);
+
+function aosAnimate()
+{
+  let animation = document.querySelectorAll('.competence-aos');
+   // console.log(window.innerWidth +' ' + animation.length);
+
+   if(window.innerWidth <= 992)
+   { 
+      for( let i= 0; i <animation.length; i++)
+      {
+        animation[i].setAttribute('data-aos', 'fade-up');
+        
+      }
+   }
+   else
+   {
+      for( let i= 0; i <animation.length; i++)
+      { 
+         // on verifie si le nombre est pair
+         if(i%2 == 0)
+         {
+            animation[i].setAttribute('data-aos', 'fade-right');
+         }
+         else
+         {
+            animation[i].setAttribute('data-aos', 'fade-left');
+         }
+        
+        
+      }
+   }
+}
+
+
+// footer
+let annee = document.getElementById('annee');
+let anneeEncours = (new Date()).getFullYear();
+annee.innerHTML = anneeEncours;
+
+
+function download(fileUrl, fileName) {
+   var a = document.createElement("a");
+   a.href = fileUrl;
+   a.setAttribute("download", fileName);
+   a.click();
+ }
  
